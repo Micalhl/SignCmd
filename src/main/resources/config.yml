@@ -1,0 +1,23 @@
+all:
+  check: "cmd" #命令牌子开头的检测
+  show: "&5[命令]"
+cmd: #指令可以用%p代替点击牌子的玩家名
+  check: "cmd" #命令牌子后面的检测，如果按照默认配置填写的话，玩家在第一行写 "cmd cmd"
+  show: "&5[玩家命令]"
+  whitelist: false #是否开启白名单功能，开启后只允许创建white列表内的命令牌子
+  blacklist: false #是否开启黑名单功能，开启后不允许创建black列表内的命令牌子
+  white: #允许执行的命令白名单，如果玩家命令以此为开头则允许创建
+    - "/res tp"
+    - "/spawn"
+  black: #不允许执行的命令黑名单，如果玩家命令以此为开头则不允许创建
+    - "/suicide"
+console:
+  check: "console" #控制台命令后面的检测，如果按照默认配置天蝎的话，管理员在第一行写 "cmd console"
+  show: "&5[控制台命令]"
+lang:
+  fake-cmd-sign: "&c禁止假冒控制台命令牌子."
+  fake-log: "&b玩家&c{name}&b尝试伪造控制台命令牌子."
+  help: "&b[命令牌子]&c牌子第二行应该是命令,如'&e/res tp xxx&c'."
+  success-player: "&a建立命令牌子成功."
+  success-console: "&a建立控制台牌子成功."
+  denied: "&c不允许创建该命令的命令牌子."

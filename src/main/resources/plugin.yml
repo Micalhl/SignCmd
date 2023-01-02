@@ -1,0 +1,5 @@
+name: SignCmd
+version: '${project.version}'
+main: com.mcstarrysky.signcmd.SignCmd
+authors: [ Mical ]
+description: Create a command sign.
